@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    
-    <title>Lista de Compras</title>
-</head>
-<body>
-    <section class="card">
-        <div class="container">
-          <h1>Lista de Compras</h1>
-          <div class="conteudo">
-            <input type="text" id="inputProduto" placeholder="Adicione um produto" />
-            <button onclick="adicionar()">Adicionar</button>                        <!– aqui é apenas um comentário–> 
-            <button onclick="Limpar">Limpar</button>
-          </div>
-        </div>
-    </section>
-    
-    <section class ="listaProduto"> 
-        <div class="container">
-            <div class="row">
-            <div class="col-sm">Nome produto</div>
-            <div class="col-sm">produto</div>
-            <div class="col-sm">
-              <button id="icbutton" data-bs-toggle="modal" data-bs-target="">Editar</button>
-              <button  id="deletebutton">Excluir</button>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      
+      <title>Lista de Compras</title>
+  </head>
+  <body>
+      <section class="card">
+          <div class="container">
+            <h1>Lista de Compras</h1>
+            <div class="conteudo">
+              <input type="text" id="inputProduto" placeholder="Adicione um produto" />
+              <button id="botaoSalvar" onclick="salvar()" class="btn btn-dark">Salvar</button>
+              <button id="botaoCancelar" onclick="cancelar()" class="btn btn-secondary">Cancelar</button>
+              <button id="botaoAdicionar" onclick="adicionar()" class="btn btn-success mr-5 ">Adicionar</button> 
+              <button onclick="limpartudo()" class="btn btn-danger" >Apagar Tudo</button>           
             </div>
           </div>
-        </div>
+      </section>
+      <!--
+      <section class ="listaProduto"> 
+          <div class="container">
+              <div class="row">
+              <div class="col-sm">Nome produto</div>
+              <div class="col-sm">Resp.Compra</div>
+              <div class="col-sm">Email</div>   
+              <div class="col-sm">
+                <button id="icbutton" data-bs-toggle="modal" data-bs-target="" class="btn btn-dark">Editar</button>
+                <button  id="deletebutton" class="btn btn-dark">Excluir</button>
+              </div>
+            </div>
+          </div>
 
-    </section>
+      </section>-->
+        
+        <section>
+          <table class="table table-hover table-primary">
+            <thead>
+              <tr>
+                <th scope="col">Nome do Produto</th>
+                <th scope="col">Resp. Compra</th>
+                <th scope="col">Email</th>
+              </tr>
+            </thead>
+            <tbody class="listaProduto"> 
 
+             
+              
+            </tbody>
+          </table>
+        </section> 
+
+
+
+
+
+
+      
+      
     
-    
-   
-    
+      
 
 
 
 
 
- <script src="script.js"> </script>
- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js%22%3E</script>
-</body>
+   <script src="script.js"> </script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js%22%3E"></script>
+  
+  </body>
 </html>
 
