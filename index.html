@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
       <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--responsividade-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,32 +15,18 @@
             <h1>Lista de Compras</h1>
             <div class="conteudo">
               <input type="text" id="inputProduto" placeholder="Adicione um produto" />
+              <button id="botaoAdicionar" onclick="adicionar()" class="btn btn-success mr-5 ">Adicionar</button> 
               <button id="botaoSalvar" onclick="salvar()" class="btn btn-dark">Salvar</button>
               <button id="botaoCancelar" onclick="cancelar()" class="btn btn-secondary">Cancelar</button>
-              <button id="botaoAdicionar" onclick="adicionar()" class="btn btn-success mr-5 ">Adicionar</button> 
               <button onclick="limpartudo()" class="btn btn-danger" >Apagar Tudo</button>           
             </div>
           </div>
       </section>
-      <!--
-      <section class ="listaProduto"> 
-          <div class="container">
-              <div class="row">
-              <div class="col-sm">Nome produto</div>
-              <div class="col-sm">Resp.Compra</div>
-              <div class="col-sm">Email</div>   
-              <div class="col-sm">
-                <button id="icbutton" data-bs-toggle="modal" data-bs-target="" class="btn btn-dark">Editar</button>
-                <button  id="deletebutton" class="btn btn-dark">Excluir</button>
-              </div>
-            </div>
-          </div>
-
-      </section>-->
+ 
         
-        <section>
-          <table class="table table-hover table-primary">
-            <thead>
+        <section class="tableRenderSearch container">
+          <table class="table table-hover table-primary" >
+            <thead class="headTable">
               <tr>
                 <th scope="col">Nome do Produto</th>
                 <th scope="col">Resp. Compra</th>
@@ -56,22 +42,8 @@
         </section> 
 
 
-
-
-
-
-      
-      
-    
-      
-
-
-
-
-
    <script src="script.js"> </script>
-   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js%22%3E"></script>
-  
+   
   </body>
 </html>
 
