@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!DOCTYPE html>   <!--estou declarando que meu arquivo é um html-->
 <html lang="pt-br">
   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--responsividade-->
+      <meta charset="UTF-8"> <!--metadados-->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--responsividade;compatibilidade-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -10,13 +10,13 @@
       <title>Lista de Compras</title>
   </head>
   <body>
-      <section class="card">
-          <div class="container">
+      <section  > <!--bootstrap ,SEÇão genérica,como um cartão, visulamente é uma linha horizontal delimitado a tabela-->
+          <div class="container">  <!--div=divisão no documento ,container Centralizada  , CLASS atributo global, bootstrap-->
             <h1>Lista de Compras</h1>
-            <div class="conteudo">
-              <input type="text" id="inputProduto" placeholder="Adicione um produto" />
+            <div><!--outra seção para adicionar os botões e o input-->
+              <input type="text" id="inputProduto" placeholder="Adicione um produto"/>
               <button id="botaoAdicionar" onclick="adicionar()" class="btn btn-success mr-5 ">Adicionar</button> 
-              <button id="botaoSalvar" onclick="salvar()" class="btn btn-dark">Salvar</button>
+              <button id="botaoSalvar" onclick="salvar()" class="btn btn-dark">Salvar</button> <!--para que eu possa usar JS-->
               <button id="botaoCancelar" onclick="cancelar()" class="btn btn-secondary">Cancelar</button>
               <button onclick="limpartudo()" class="btn btn-danger" >Apagar Tudo</button>           
             </div>
@@ -24,25 +24,34 @@
       </section>
  
         
-        <section class="tableRenderSearch container">
-          <table class="table table-hover table-primary" >
-            <thead class="headTable">
-              <tr>
-                <th scope="col">Nome do Produto</th>
+        <section class="tableRenderSearch container"> <!--teable render ?-->
+          <table class="table table-hover table-primary"> <!--bootstrap, primary=cor, table-hover =realce , table?-->
+            <!--<caption>Council budget (in £) 2018</caption>-->
+            <thead class="headTable"> <!--define o cabeçalho da tabela-->
+              
+              <tr><!--define a lina (row)-->
+                <th scope="col">Nome do Produto</th><!--scope="col" é cabecalho da coluna-->
                 <th scope="col">Resp. Compra</th>
                 <th scope="col">Email</th>
               </tr>
             </thead>
-            <tbody class="listaProduto"> 
-
-             
-              
+            <tbody class="listaProduto"> <!--precido dessa clase po JS-->
+              <!-- <tr>
+            
+                <td>${produto}</td> 
+                <td>${people[i].name}</td>
+                <td>${people[i].email}</td>
+                <td>
+                  <button onclick="editar('${produtos[i]}')" id="icbutton"  class="btn btn-dark">Editar</button>
+                  <button  onclick="Limpar('${produtos[i]}')" id="deletebutton" class="btn btn-dark">Excluir</button>
+                </td>
+              </tr> -->
             </tbody>
           </table>
         </section> 
 
 
-   <script src="script.js"> </script>
+   <script src="script.js"> </script>  <!--Pausa no processamento da página ,Pausa na renderização-->
    
   </body>
 </html>
